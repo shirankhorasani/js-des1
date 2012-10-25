@@ -16,7 +16,7 @@
 		margin:5px 5px;
 		float: left;
 		webkit-teransition:all 1s;
-		border:dashed;
+		border:dotted;
 		border-radius: 15px;
 	}
 	.box.hover{
@@ -28,11 +28,11 @@
 <body>
 
 	<script type="text/javascript">
-	for(i=0; i<35; i++){
+	for(i=0; i<60; i++){
 	document.write('<div class="box"></div>')
 	}
 	function choose1 (){
-		r = Math.floor(Math.random()*35);
+		r = Math.floor(Math.random()*60);
 		document.getElementsByClassName('box').item(r).className += ' hover'
 	}
 	setInterval(choose1,400)

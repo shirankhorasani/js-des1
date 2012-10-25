@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+	body{
+		background-color: black;
+	}
+	div.box div{
+		width: 40px;
+		height: 40px;
+		margin:2px;
+		float: left;
+		-webkit-transition:all 100ms;
+		border-radius: 25px;
+	}
+	div.box div.state1{
+		background-color: lightblue;
+		float: right;
+	}
+	div.box div.state2{
+		background-color: darkorange;
+		border-radius: 0px;
+	}
+	div.box div.state3{
+		background-color: orange;
+		border-radius: 5px;
+		opacity: .8;
+		outline: 1px dashed white;
+		margin:0px;
+	}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<script type="text/javascript">
+			var max=500;
+			for(i=0; i<max; i++){
+				document.write('<div></div>');
+			}
+			var divs = document.getElementsByClassName('box').item(0).getElementsByTagName('div');
+			function choose1() {
+				var r=Math.floor(Math.random()*max);
+				var h= Math.floor(Math.random()*360);
+				divs.item(r).style.backgroundColor="hsl("+h+",50%,50%)"
+			}
+			setInterval(choose1,1);
+		</script>
+	</div>
+	
+</body>
+</html>
