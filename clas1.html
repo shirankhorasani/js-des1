@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<title></title>
+</head>
+<style type="text/css">
+	body{
+		background-color: black;
+		color: white;
+	}
+	.box{
+		width: 100px;
+		height: 100px;
+		background-color: darkmagenta;
+		margin:5px 5px;
+		float: left;
+		webkit-teransition:all 1s;
+		border:dashed;
+		border-radius: 15px;
+	}
+	.box.hover{
+		webkit-transform: scale(1.15) rotate(180deg);
+		background-color: pink;
+		border: solid;
+	}
+</style>
+<body>
+
+	<script type="text/javascript">
+	for(i=0; i<35; i++){
+	document.write('<div class="box"></div>')
+	}
+	function choose1 (){
+		r = Math.floor(Math.random()*35);
+		document.getElementsByClassName('box').item(r).className += ' hover'
+	}
+	setInterval(choose1,400)
+	</script>
+</body>
+</html>
